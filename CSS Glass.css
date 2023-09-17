@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+.container{
+    display: flex;
+    gap: 50px;
+}
+.fa{
+    font-size: 50px;
+    background: linear-gradient(to left, #ffffff, #d1d1d1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.Logo{
+    position: relative;
+}
+.icon{
+    width: 150px;
+    height: 150px;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 35px;
+    cursor: pointer;
+    padding-left: 44px;
+    padding-top: 40px;
+    transition: all .5s ease-in-out;
+    position: relative;
+}
+.icon p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: white;
+    opacity: 0;
+    position: absolute;
+    transform: translateY(100px);
+    transition: all .5s ease-in-out;
+}
+.icon-bg{
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 150px;
+    border-radius: 35px;
+    bottom: 5px;
+    z-index: -100;
+    transform-origin: 80% 80%;
+    transform: rotateZ(20deg);
+    right: 5px;
+    padding-left: 44px;
+    padding-top: 40px;
+    transition: all .5s ease-in-out;
+    pointer-events: none;
+}
+.icon:hover ~ .icon-bg{
+    transform: rotateZ(0) scale(.9);
+}
+.icon:hover p{
+    opacity: 1;
+    transform: translateY(120px);
+}
+.icon:hover{
+    transform: scale(.9);
+}
